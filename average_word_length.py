@@ -1,5 +1,5 @@
 # Open file
-file_name = 'hamlet.txt'
+file_name = 'beyond_good_and_evil.txt'
 
 with open(file_name) as file:
     text = file.read()
