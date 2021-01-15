@@ -1,20 +1,22 @@
-
 # Script settings
-file_name = 'beyond_good_and_evil.txt'
+file_names = ['beyond_good_and_evil.txt', 'jenseits_von_gut_und_boese.txt', 'hamlet.txt']
 interpunction = ['.', ',', ':', ';', '?']
 
-# Open file
-with open(file_name) as file:
-    text = file.read()
 
-# Clean the text, remove interpunction
-for character in interpunction:
-    text = text.replace(character, '')
+# Loop over all specified files
+for file_name in file_names:
+    # Open file
+    with open(file_name, encoding='utf-8') as file:
+        text = file.read()
 
-# Create a list of individual word lengths  
-word_lengths = []
-for word in text.split():
-    word_lengths.append(len(word))
+    # Clean the text, remove interpunction
+    for character in interpunction:
+        text = text.replace(character, '')
 
-# Print the answer
-print(f'Average word length: {sum(word_lengths) / len(word_lengths)}')
+    # Create a list of individual word lengths
+    word_lengths = []
+    for word in text.split():
+        word_lengths.append(len(word))
+
+    # Print the answer
+    print(f'Average word length in {file_name}: {sum(word_lengths) / len(word_lengths)}')
