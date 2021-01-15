@@ -1,3 +1,4 @@
+
 # Script settings
 file_name = 'beyond_good_and_evil.txt'
 interpunction = ['.', ',', ':', ';', '?']
