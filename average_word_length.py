@@ -1,10 +1,10 @@
 
 # Script settings
-file_name = 'beyond_good_and_evil.txt'
+file_name = 'hamlet.txt'
 interpunction = ['.', ',', ':', ';', '?']
 
 # Open file
-with open(file_name) as file:
+with open(file_name, encoding='utf-8') as file:
     text = file.read()
 
 # Clean the text, remove interpunction
